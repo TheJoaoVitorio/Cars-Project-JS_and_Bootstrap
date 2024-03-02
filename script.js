@@ -56,3 +56,13 @@ function zoomImg(position){
     new bootstrap.Modal("#zoomImg").show();
 }
 
+function changeTheme(){
+    let theme = document.querySelector("html").getAttribute("data-bs-theme");
+    if (theme === "dark"){
+        document.querySelector("html").setAttribute("data-bs-theme","light");
+        document.querySelector("#changeTheme").innerHTML = `<i class="bi bi-moon-fill"></i>`;
+    }else{
+        document.querySelector("html").setAttribute("data-bs-theme","dark");
+        document.querySelector("#changeTheme").innerHTML = `<i class="bi bi-brightness-high-fill"></i>`;
+    }
+}
